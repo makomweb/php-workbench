@@ -1,5 +1,9 @@
 # PHP workbench
 
+<p align="center">
+  <img src="./assets/logo.png" alt="Projektlogo" width="300"/>
+</p>
+
 This project provides a workbench for PHP applications.
 Motivation is to not have PHP installed on your local system but to let everything run in a docker compose stack.
 The PHP project you are interested in is linked into the container via symlink.
@@ -31,7 +35,7 @@ make build
 # boot the stack
 make up
 
-# open a shell on the workbench container in order to work on the Symfony codebase
+# open a shell on the workbench container in order to work on the project code base
 make shell
 ~~~
 
