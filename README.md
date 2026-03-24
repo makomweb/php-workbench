@@ -15,7 +15,7 @@ martin@box ~% tree -d ./Workbench -L 2
 ./Workbench
 ├── PHP-Workbench
 │   └── build
-└── Symfony
+└── symfony
     ├── src
     └── vendor
 6 directories
@@ -27,7 +27,7 @@ The folders **PHP-Workbench** and the project you want to put onto the workbench
 cd PHP-Workbench
 
 # create a symlink
-ln -s ../Symfony ./project
+ln -s ../symfony ./project
 
 # build the image
 make build
@@ -37,6 +37,13 @@ make up
 
 # open a shell on the workbench container in order to work on the project code base
 make shell
+
+# running tests when the symfony project was mounted
+# run it from within the container
+php phpunit
+
+# or
+php phpunit ./src/Symfony/Component/ObjectMapper/
 ~~~
 
 Note: Changes to the project must be commited inside the respective repository (i.g. in Symfony directly).
